@@ -1,0 +1,50 @@
+// base css vars
+
+.ui-button {
+  --button-primary-bg-color-default: #00133a; 
+  --button-primary-bg-color-hover: #54617b; 
+  --button-primary-bg-color-active: #334261; 
+  --button-primary-bg-color-disabled: #e6e7eb; 
+  --button-primary-text-color-default: #e6e7eb; 
+  --button-primary-text-color-hover: #e6e7eb; 
+  --button-primary-text-color-active: #e6e7eb; 
+  --button-primary-text-color-disabled: #b0b6c2; 
+  --button-secondary-bg-color-default: #0029a9; 
+  --button-secondary-bg-color-hover: #5470c5; 
+  --button-secondary-bg-color-active: #3354ba; 
+  --button-secondary-bg-color-disabled: #e6eaf6; 
+  --button-secondary-text-color-default: #e6eaf6; 
+  --button-secondary-text-color-hover: #e6eaf6; 
+  --button-secondary-text-color-active: #e6eaf6; 
+  --button-secondary-text-color-disabled: #b0bde4; 
+  --button-bordered-bg-color-default: #ffffff; 
+  --button-bordered-bg-color-hover: #ffffff; 
+  --button-bordered-bg-color-active: #ffffff; 
+  --button-bordered-bg-color-disabled: #ffffff; 
+  --button-bordered-text-color-default: #00133a; 
+  --button-bordered-text-color-hover: #54617b; 
+  --button-bordered-text-color-active: #334261; 
+  --button-bordered-text-color-disabled: #e6e7eb; 
+  --icon-spacer-l: 16px; 
+  --icon-spacer-m: 8px; 
+  --icon-spacer-s: 8px; 
+  --icon-size-l: 32px; 
+  --icon-size-m: 24px; 
+  --icon-size-s: 16px; 
+  --x-padding-with-icon-l: 24px; 
+  --x-padding-with-icon-m: 20px; 
+  --x-padding-with-icon-s: 16px; 
+  --x-padding-l: 32px; 
+  --y-padding-l: 16px; 
+  --border-radius-only-icon: 50%; 
+  --border-radius: 24px; 
+  --x-padding-m: 24px; 
+  --y-padding-m: 16px; 
+  --x-padding-s: 16px; 
+  --y-padding-s: 10px; 
+  --min-width: 120px; 
+  --border-width: 2px; 
+  --font-size-l: 24px; 
+  --font-size-m: 20px; 
+  --font-size-s: 16px; 
+ }

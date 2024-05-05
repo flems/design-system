@@ -1,0 +1,204 @@
+@import './tokens.scss';
+
+.ui-button {
+  --line-height: 1.2;
+  --font-weight: 400;
+  --transition: 0.2s ease-in;
+
+  &--size-l {
+    --icon-spacer: var(--icon-spacer-l);
+    --font-size: var(--font-size-l);
+    --padding: var(--y-padding-l) var(--x-padding-l);
+    --icon-size: var(--icon-size-l);
+    --font-size: var(--font-size-l);
+
+    &.ui-button--icon-left {
+      --padding: var(--y-padding-l) var(--x-padding-l) var(--y-padding-l) var(--x-padding-with-icon-l);
+    }
+    
+    &.ui-button--icon-right {
+      --padding: var(--y-padding-l) var(--x-padding-with-icon-l) var(--y-padding-l) var(--x-padding-l);
+    }
+
+    &.ui-button--only-icon {
+      --padding: var(--y-padding-l);
+    }
+  }
+
+  &--size-m {
+    --icon-spacer: var(--icon-spacer-m);
+    --font-size: var(--font-size-m);
+    --padding: var(--y-padding-m) var(--x-padding-m);
+    --font-size: var(--font-size-m);
+    --icon-size: var(--icon-size-m);
+
+    &.ui-button--icon-left {
+      --padding: var(--y-padding-m) var(--x-padding-m) var(--y-padding-m) var(--x-padding-with-icon-m);
+    }
+    
+    &.ui-button--icon-right {
+      --padding: var(--y-padding-m) var(--x-padding-with-icon-m) var(--y-padding-m) var(--x-padding-m);
+    }
+
+    &.ui-button--only-icon {
+      --padding: var(--y-padding-m);
+    }
+  }
+
+  &--size-s {
+    --icon-spacer: var(--icon-spacer-s);
+    --font-size: var(--font-size-s);
+    --padding: var(--y-padding-s) var(--x-padding-s);
+    --font-size: var(--font-size-s);
+    --icon-size: var(--icon-size-s);
+
+    &.ui-button--icon-left {
+      --padding: var(--y-padding-s) var(--x-padding-s) var(--y-padding-s) var(--x-padding-with-icon-s);
+    }
+    
+    &.ui-button--icon-right {
+      --padding: var(--y-padding-s) var(--x-padding-with-icon-s) var(--y-padding-s) var(--x-padding-s);
+    }
+
+    &.ui-button--only-icon {
+      --padding: var(--y-padding-s);
+    }
+  }
+
+  &--theme-primary {
+    --bg-color: var(--button-primary-bg-color-default);
+    --text-color: var(--button-primary-text-color-default);
+    --border-color: var(--button-primary-bg-color-default);
+
+    &:hover {
+      --bg-color: var(--button-primary-bg-color-hover);
+      --text-color: var(--button-primary-text-color-hover);
+      --border-color: var(--button-primary-bg-color-hover);
+    }
+
+    &.is-active,
+    &:active {
+      --bg-color: var(--button-primary-bg-color-active);
+      --text-color: var(--button-primary-text-color-active);
+      --border-color: var(--button-primary-bg-color-active);
+    }
+
+    &[disabled] {
+      --bg-color: var(--button-primary-bg-color-disabled);
+      --text-color: var(--button-primary-text-color-disabled);
+      --border-color: var(--button-primary-bg-color-disabled);
+    }
+  }
+
+  &--theme-secondary {
+    --bg-color: var(--button-secondary-bg-color-default);
+    --text-color: var(--button-secondary-text-color-default);
+    --border-color: var(--button-secondary-bg-color-default);
+
+    &:hover {
+      --bg-color: var(--button-secondary-bg-color-hover);
+      --text-color: var(--button-secondary-text-color-hover);
+      --border-color: var(--button-secondary-bg-color-hover);
+    }
+
+    &.is-active,
+    &:active {
+      --bg-color: var(--button-secondary-bg-color-active);
+      --text-color: var(--button-secondary-text-color-active);
+      --border-color: var(--button-secondary-bg-color-active);
+    }
+
+    &[disabled] {
+      --bg-color: var(--button-secondary-bg-color-disabled);
+      --text-color: var(--button-secondary-text-color-disabled);
+      --border-color: var(--button-secondary-bg-color-disabled);
+    }
+  }
+
+  &--theme-bordered {
+    --bg-color: var(--button-bordered-bg-color-default);
+    --text-color: var(--button-bordered-text-default);
+    --border-color: currentColor;
+
+    &:hover {
+      --text-color: var(--button-bordered-text-color-hover);
+    }
+
+    &.is-active,
+    &:active {
+      --text-color: var(--button-bordered-text-color-active);
+    }
+
+    &[disabled] {
+      --text-color: var(--button-bordered-text-color-disabled);
+    }
+  }
+
+  &--only-icon {
+    --min-width: auto;
+    --border-radius: var(--border-radius-only-icon);
+  }
+}
+
+.ui-button {
+  color: var(--text-color);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--icon-spacer);
+  padding: var(--padding);
+  background: var(--bg-color);
+  text-decoration: none;
+  border-radius: var(--border-radius);
+  transition: all var(--transition);
+  border: var(--border-width) solid var(--border-color);
+  min-width: var(--min-width);
+  cursor: pointer;
+  font-size: var(--font-size);
+  line-height: var(--line-height);
+  vertical-align: middle;
+  position: relative;
+
+  &--icon-left {
+    flex-direction: row-reverse;
+  }
+
+  &__icon {
+    display: block;
+    flex-shrink: 0;
+    background: red;
+    width: max(var(--icon-size), calc(1em * var(--line-height)));
+    height: max(var(--icon-size), calc(1em * var(--line-height)));
+  }
+
+  &__text {
+    text-align: left;
+  }
+
+  &.is-loading {
+    &:after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: calc(var(--icon-size) * 0.75);
+      height: calc(var(--icon-size) * 0.75);
+      border: var(--border-width) solid currentColor;
+      border-top-color: transparent;
+      border-radius: 50%;
+      animation: circle 1s linear infinite;
+    }
+
+    .ui-button__text,
+    .ui-button__icon {
+      opacity: 0;
+    }
+  }
+}
+
+@keyframes circle {
+  to {
+      transform: translate(-50%, -50%) rotate(1turn);
+  }
+}
