@@ -1,5 +1,6 @@
 'use client'
 
+import UiIcon from '@/components/UiIcon/UiIcon'
 import './index.scss'
 import { TUiButton } from './ui-button.type'
 import { useUiButton } from './useUiButton'
@@ -12,9 +13,10 @@ export function UiButton({
     theme='primary',
     iconPosition='right',
     icon,
+    loading,
     ...props
 }: TUiButton) {
-    const { computedClass } = useUiButton({size, theme, iconPosition, children, icon, ...props})
+    const { computedClass } = useUiButton({size, theme, iconPosition, children, icon, loading, ...props})
     const ComponentName = props.href ? 'a' : 'button'
 
     return (
@@ -26,7 +28,7 @@ export function UiButton({
                 <span className={`${BASE_CLASS_NAME}__text`}>{children}</span>
             )}
             {icon && (
-                <span className={`${BASE_CLASS_NAME}__icon ${icon}`}></span>
+                <UiIcon className={`${BASE_CLASS_NAME}__icon`} name={icon}></UiIcon>
             )}
         </ComponentName>
     )

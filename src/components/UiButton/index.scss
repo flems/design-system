@@ -166,7 +166,6 @@
   &__icon {
     display: block;
     flex-shrink: 0;
-    background: red;
     width: max(var(--icon-size), calc(1em * var(--line-height)));
     height: max(var(--icon-size), calc(1em * var(--line-height)));
   }

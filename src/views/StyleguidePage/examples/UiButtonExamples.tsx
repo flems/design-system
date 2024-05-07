@@ -12,38 +12,38 @@ export function UiButtonExamples () {
     const mapExpamples:IExmaple[] = [
             {
                 loading: false,
-                icon: '',
+                icon: 'arrow-right',
                 iconPosition: undefined,
                 text: 'Name button',
             },
             {
                 loading: true,
-                icon: '',
+                icon: 'arrow-right',
                 iconPosition: undefined,
                 text: 'Name button',
             },
             {
                 loading: false,
-                icon: 'iconName',
-                iconPosition: 'right',
+                icon: 'arrow-right',
+                iconPosition: undefined,
                 text: 'Name button',
             },
             {
                 loading: false,
-                icon: 'iconName',
+                icon: 'arrow-left',
                 iconPosition: 'left',
                 text: 'Name button',
             },
             {
                 loading: false,
-                icon: 'iconName',
-                iconPosition: 'left',
+                icon: 'settings',
+                iconPosition: undefined,
                 text: undefined,
             },
             {
                 loading: true,
-                icon: 'iconName',
-                iconPosition: 'left',
+                icon: 'settings',
+                iconPosition: undefined,
                 text: undefined,
             }
     ]
@@ -95,7 +95,7 @@ export function UiButtonExamples () {
                         ))}
                     </div>
                 </div>
-                <div className='d-flex gap-32 flex-dir-column'>
+                {/* <div className='d-flex gap-32 flex-dir-column'>
                     <h3 style={{marginBottom: 0, marginTop: '32px'}}>Secondary</h3>
                     <div className='d-flex gap-16 align-items-start flex-wrap'>
                         {mapExpamples.map((itemA, indexA) => (
@@ -186,7 +186,7 @@ export function UiButtonExamples () {
                         ))}
                     </div>
                     
-                </div>
+                </div> */}
             </div>
             
         </SgSection>

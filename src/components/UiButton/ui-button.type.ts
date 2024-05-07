@@ -1,4 +1,5 @@
 import React from 'react'
+import { TIconName } from '@/components/UiIcon/UiIcon'
 
 export type TUiButton = React.ButtonHTMLAttributes<HTMLButtonElement> & React.AnchorHTMLAttributes<HTMLAnchorElement> & {
     children?: React.ReactNode,
@@ -7,6 +8,6 @@ export type TUiButton = React.ButtonHTMLAttributes<HTMLButtonElement> & React.An
     href?: string
     size?: 'l' | 'm' | 's'
     onlyIcon?: boolean
-    icon?: string
+    icon?: TIconName
     iconPosition?: 'left' | 'right'
 }
